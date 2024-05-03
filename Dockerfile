@@ -1,7 +1,11 @@
-FROM node:latest
+FROM node:22-slim
 
-RUN mkdir /src
+WORKDIR /usr/src/app
 
-COPY hello.js /src
+COPY  package*.json ./
+RUN npm install
 
-CMD ["node", "src/hello.js"]
+COPY . .
+
+EXPOSE 3000
+CMD ["npm", "run", "dev"]

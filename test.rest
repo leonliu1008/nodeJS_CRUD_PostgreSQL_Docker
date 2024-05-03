@@ -1,0 +1,21 @@
+###
+GET http://localhost:3000/setup
+
+###
+GET http://localhost:3000/
+
+###
+POST http://localhost:3000/
+Content-Type: application/json
+
+{
+    "name":"leon",
+    "location":"TW hello world"
+}
+###
+DELETE  http://localhost:3000/deleteTable/
+
+###
+GET http://localhost:3000/test/
+
+###
